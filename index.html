@@ -2,22 +2,18 @@
 layout: default
 ---
 
-<div class="home">
+{% include header.html %}
 
-  <h1 class="page-heading">Posts</h1>
+<div id="fea" class="features">
+  {% include screen-shot-gallery.html %}
+  {% include pop-up-box.html %}
+  {% include team.html %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <div class="clearfix"> </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  {% include people-says.html %}
+  {% include featured.html %}
+  {% include getintouch.html %}
 </div>
+
+{% include footer.html %}

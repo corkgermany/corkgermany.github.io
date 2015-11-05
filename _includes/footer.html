@@ -1,38 +1,59 @@
-<footer class="site-footer">
+<div class="footer">
+  <div class="container">
+    <div class="footer-grids">
+      <div class="col-md-3 footer-grid about-info">
+        <a href="#"><img src="images/logo.png" title="Umbrella"/></a>
 
-  <div class="wrapper">
+        <p>eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="col-md-3 footer-grid subscribe">
+        <h3>Subscribe </h3>
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <form>
+          <input type="text" placeholder="" required/>
+          <input type="submit" value=""/>
+        </form>
+        <p>eusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      </div>
+      <div class="col-md-3 footer-grid explore">
+        <h3>Explore</h3>
+        <ul class="col-md-6">
+          <li><a href="#">Envato</a></li>
+          <li><a href="#">Themecurve</a></li>
+          <li><a href="#">Kreativeshowcase</a></li>
+          <li><a href="#">Freebiescurve</a></li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
+        <ul class="col-md-6">
+          <li><a href="#">Themeforest</a></li>
+          <li><a href="#">Microsoft</a></li>
+          <li><a href="#">Google</a></li>
+          <li><a href="#">Yahoo</a></li>
         </ul>
+        <div class="clearfix"></div>
       </div>
+      <div class="col-md-3 footer-grid copy-right">
+        <p>Eusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua. </p>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+        <p class="copy">Template by <a href="http://w3layouts.com/">w3layouts</a></p>
       </div>
+      <div class="clearfix"></div>
+      <script type="text/javascript">
+        $(document).ready(function () {
+          /*
+           var defaults = {
+           containerID: 'toTop', // fading element id
+           containerHoverID: 'toTopHover', // fading element hover id
+           scrollSpeed: 1200,
+           easingType: 'linear'
+           };
+           */
+
+          $().UItoTop({easingType: 'easeOutQuart'});
+
+        });
+      </script>
+      <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     </div>
-
   </div>
-
-</footer>
+</div>
